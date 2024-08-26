@@ -1,12 +1,12 @@
 package main
 
 import (
-	"fmt"
-
-	greetingv1 "./greeting"
-	greetingv2 "./greeting/v2"
-)
+	color "github.com/fatih/color"
+	"github.com/sirupsen/logrus"
+) // Указываем путь до нужного пакета внутри репозитория
 
 func main() {
-	fmt.Println("Первое приветствие: ", greetingv1.Get(), "\n", "Второе приветствие: ", greetingv2.Get())
+	logrus.Println("Hello, Hexlet!")
+	c := color.New(color.FgCyan).Add(color.Underline)
+	c.Println("Hello, Hexlet!")
 }
