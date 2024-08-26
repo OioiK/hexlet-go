@@ -1,12 +1,14 @@
 package main
 
 import (
-	color "github.com/fatih/color"
+	"hexlet-go/greeting"
+
+	"github.com/fatih/color"
 	"github.com/sirupsen/logrus"
 ) // Указываем путь до нужного пакета внутри репозитория
 
 func main() {
-	logrus.Println("Hello, Hexlet!")
+	logrus.Println(greeting.Get())
 	c := color.New(color.FgCyan).Add(color.Underline)
-	c.Println("Hello, Hexlet!")
+	c.Println(greeting.Get())
 }
